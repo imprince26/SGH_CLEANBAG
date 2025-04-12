@@ -2,10 +2,10 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { useAuth } from '../../hooks/useAuth';
-import { 
-  Trash2, 
-  Award, 
-  MapPin, 
+import {
+  Trash2,
+  Award,
+  MapPin,
   Sparkles,
   ArrowRight,
   Users,
@@ -15,7 +15,7 @@ import {
 
 function CleanbageApp() {
   const navigate = useNavigate();
-  const {isAuthenticated, user} = useAuth();
+  const { isAuthenticated, user } = useAuth();
 
   const features = [
     {
@@ -51,7 +51,7 @@ function CleanbageApp() {
             <p className="text-emerald-800 text-lg mb-8">
               Continue making our community cleaner and greener
             </p>
-            
+
             <motion.button
               onClick={() => navigate(`/${user.role}/dashboard`)}
               className="px-8 py-3 bg-emerald-500 text-white rounded-lg font-semibold 
@@ -67,7 +67,7 @@ function CleanbageApp() {
       ) : (
         <div className="bg-emerald-50 min-h-screen">
           <div className="absolute inset-0 bg-[url('/images/pattern.svg')] opacity-5"></div>
-          
+
           <div className="relative container mx-auto px-4 py-16 lg:py-24">
             <div className="grid lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
               {/* Left Column - Hero Content */}
@@ -77,14 +77,14 @@ function CleanbageApp() {
                 transition={{ duration: 0.8 }}
               >
                 <h1 className="text-4xl lg:text-5xl font-bold text-emerald-600 mb-6 leading-tight">
-                  Smart Waste Management for a 
+                  Smart Waste Management for a
                   <span className="text-emerald-400"> Cleaner Tomorrow</span>
                 </h1>
                 <p className="text-lg text-emerald-800 mb-8">
-                  Join Cleanbage in revolutionizing waste management through technology 
+                  Join Cleanbage in revolutionizing waste management through technology
                   and community participation.
                 </p>
-                
+
                 <div className="flex flex-col sm:flex-row gap-4">
                   <motion.button
                     onClick={() => navigate('/register')}
